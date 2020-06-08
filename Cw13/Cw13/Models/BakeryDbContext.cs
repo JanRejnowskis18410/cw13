@@ -11,6 +11,7 @@ namespace Cw13.Models
         public DbSet<Zamowienie> Zamowienie { get; set; }
         public DbSet<WyrobCukierniczy> WyrobCukierniczy { get; set; }
         public DbSet<Zamowienie_WyrobCukierniczy> Zamowienie_WyrobCukierniczy { get; set; }
+        public DbSet<Pracownik> Pracownik { get; set; }
 
         public BakeryDbContext()
         {

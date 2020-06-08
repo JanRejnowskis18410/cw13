@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Cw13.Models
 {
-    public class ZamowienieKlientWyrobCukierniczy
+    public class OrderInfo
     {
         public int IdZamowienia { get; set; }
         public int IdKlienta { get; set; }
@@ -19,7 +19,6 @@ namespace Cw13.Models
          * A possible object cycle was detected which is not supported.
          * This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32.
          */
-        [JsonIgnore]
-        public ICollection<WyrobCukierniczy> WyrobyCukiernicze { get; set; }
+        public ICollection<ProductInfo> WyrobyCukiernicze { get; set; }
     }
 }
